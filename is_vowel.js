@@ -4,4 +4,4 @@ function is_vowel(char){
   return listofVowel.includes(char);
 }
 
-console.log(is_vowel('a'));
+console.log(is_vowel('b'));
