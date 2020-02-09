@@ -1,0 +1,58 @@
+# Es6
+
+ - Async
+ Write a function to return 'Hello'
+ 
+ function myFunction(){
+     return 'hello world';
+ }
+ console.log(myFunction());
+ 
+   Add async at the beginning of the function to make the function return a promise.
+   
+   function myFunction(){
+     return 'hello world';
+ }
+ 
+    myFunction()
+    .then(res => console.log(res));
+    
+    
+    Await
+    
+    When the function return a promise , we can wait until the promise is resolve
+    
+     async function myFunction(){
+  
+  //we can use await to wait until that promise is resolve
+  const promise= new Promise((resolve,reject) => {
+    setTimeout(() => resolve('hello'),1000);
+  });
+  const res = await promise;  //wait until the promise is resolve
+  return res;
+}
+
+myFunction()
+  .then(res => console.log(res));
+  
+  Catch error
+  
+   async function myFunction(){
+  
+  //we can use await to wait until that promise is resolve
+  const promise= new Promise((resolve,reject) => {
+    setTimeout(() => resolve('hello'),1000);
+  });
+   //throw error
+   const error= true;
+   if(!error){
+     const res = await promise;  //wait until the promise is resolve
+  return res;
+   }else{
+     await Promise.reject(new Error('Something went wrong'));
+   }
+}
+
+myFunction()
+  .then(res => console.log(res))
+  .catch(err => console.log(err));
