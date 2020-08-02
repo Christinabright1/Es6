@@ -14,3 +14,7 @@ function targetNum(target, user, computer){
 }
 
 console.log(targetNum(1,8,7));
+
+
+
+https://stackoverflow.com/questions/8584902/get-closest-number-out-of-array
