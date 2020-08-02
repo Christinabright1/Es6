@@ -1,0 +1,16 @@
+-Get the closet number to the target number
+
+function targetNum(target, user, computer){
+  return Math.abs(user -target) < Math.abs(computer -target)?
+   user : computer;
+}
+
+console.log(targetNum(1,8,7));
+
+
+function targetNum(target, user, computer){
+  return Math.abs(user -target) < Math.abs(computer -target)?
+   'User win' : 'computer win';
+}
+
+console.log(targetNum(1,8,7));
